@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4421275216440804}
   - component: {fileID: 114977339401484194}
   - component: {fileID: 114578377328575098}
+  - component: {fileID: 114780865640414640}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -289,6 +290,18 @@ MonoBehaviour:
   altitude: 0
   pace: 10
   shouldDeletePrevious: 0
+--- !u!114 &114780865640414640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1126826101135700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7af23e1e84bcf4e4e9bbd625133d96d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: grass_dense
 --- !u!114 &114977339401484194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -303,7 +316,7 @@ MonoBehaviour:
   dimension: 1
   correctionFactor: {x: 10, y: 10, z: 10}
   generateAtStart: 0
-  map: {fileID: 2800000, guid: c7ecfa38a8b58954785903c2d29b1490, type: 3}
+  map: {fileID: 2800000, guid: 3e3b21093b0c96e448ce7770fe82f7aa, type: 3}
   colorMappings:
   - color: {r: 0, g: 0, b: 0, a: 1}
     prefab: {fileID: 100000, guid: 887b6d1e6adfe18428020b5325466ad9, type: 3}
@@ -413,12 +426,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   instantiatedVegetation:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
