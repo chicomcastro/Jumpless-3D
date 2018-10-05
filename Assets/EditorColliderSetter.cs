@@ -14,7 +14,7 @@ public class EditorColliderSetter : Editor
 
         GUILayout.BeginHorizontal();
 
-        if (GUILayout.Button("Set colliders to trigger"))
+        if (GUILayout.Button("Set colliders to trigger by name"))
         {
             myScript.SetCollider(myScript.name);
         }

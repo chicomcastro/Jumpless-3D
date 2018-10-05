@@ -54,6 +54,9 @@ namespace LevelGenerator
             {
                 GenerateLevel();
             }
+
+            SearchForFloor();
+            SearchForLevel();
         }
 
         public void GenerateLevel()
@@ -234,6 +237,8 @@ namespace LevelGenerator
                 if (_m.gameObject.transform.parent.gameObject == level)
                     instantiatedLevel.Add(_m.gameObject);
             }
+
+            // dar um jeito de mapear entre chão e objetos
         }
         public void GenerateVegetation()
         {
@@ -263,7 +268,7 @@ namespace LevelGenerator
                         Quaternion rot = Quaternion.Euler(0, UnityEngine.Random.Range(0f, 360f), 0);
 
                         g = Instantiate(_o.objects[UnityEngine.Random.Range(0, _o.objects.Length)], pos, rot, gamo.transform);
-
+                        
                         instantiatedVegetation.Add(g);
 
                         break;
