@@ -59988,7 +59988,7 @@ GameObject:
   - component: {fileID: 1286308621}
   m_Layer: 0
   m_Name: Objetivo
-  m_TagString: Untagged
+  m_TagString: obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67409,6 +67409,7 @@ GameObject:
   - component: {fileID: 1399012913}
   - component: {fileID: 1399012912}
   - component: {fileID: 1399012911}
+  - component: {fileID: 1399012914}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -67483,6 +67484,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1399012909}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1399012914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1399012909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a963be41b6959f844b0c4eb7e3b323d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 4
 --- !u!1 &1399668689
 GameObject:
   m_ObjectHideFlags: 0
@@ -101903,7 +101916,7 @@ Prefab:
     - target: {fileID: 114765838848124308, guid: 27d584ce01f31ec439cbd452b555c54c,
         type: 2}
       propertyPath: m_JumpPower
-      value: 12.5
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27d584ce01f31ec439cbd452b555c54c, type: 2}
