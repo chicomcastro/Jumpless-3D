@@ -37,6 +37,7 @@ namespace PC3D
 
         private void Update()
         {
+            if (transform.position.y < -50) Application.LoadLevel(Application.loadedLevel);
             if (CrossPlatformInputManager.GetButtonDown("Front")) preslide = true;
             if (CrossPlatformInputManager.GetButtonUp("Front")) preslide = false;
             if (!m_Jump)
