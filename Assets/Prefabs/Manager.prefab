@@ -8,15 +8,15 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications: []
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 0}
+  m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1126826101135700}
-  m_IsPrefabParent: 1
+  m_IsPrefabAsset: 1
 --- !u!1 &1126826101135700
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
+  serializedVersion: 6
   m_Component:
   - component: {fileID: 4421275216440804}
   - component: {fileID: 114977339401484194}
@@ -32,7 +32,7 @@ GameObject:
 --- !u!4 &4421275216440804
 Transform:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1126826101135700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -45,7 +45,7 @@ Transform:
 --- !u!114 &114578377328575098
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1126826101135700}
   m_Enabled: 1
@@ -293,7 +293,7 @@ MonoBehaviour:
 --- !u!114 &114780865640414640
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1126826101135700}
   m_Enabled: 1
@@ -301,11 +301,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7af23e1e84bcf4e4e9bbd625133d96d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: grass_dense
+  name: grass
 --- !u!114 &114977339401484194
 MonoBehaviour:
   m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1126826101135700}
   m_Enabled: 1
@@ -558,6 +558,144 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   objectsToSpawn:
   - name: tree
     objects:
@@ -578,7 +716,8 @@ MonoBehaviour:
     - {fileID: 100000, guid: b4725b8e316ab3a4aa456e701d8b50d1, type: 3}
     - {fileID: 100000, guid: a75c2df00fc816246ab0492bb401de7d, type: 3}
     probability: 0.2
-    dispersionRadius: 2.5
+    dispersionRadius: 1
+    relativaScale: 0.75
   - name: flower
     objects:
     - {fileID: 100000, guid: 1a66215adc19a284fa289b1114b16460, type: 3}
@@ -591,7 +730,8 @@ MonoBehaviour:
     - {fileID: 100000, guid: 4f358edf1e669764d8bc86006fc99121, type: 3}
     - {fileID: 100000, guid: 305493b43f2148a468de04274e158b0b, type: 3}
     probability: 0.1
-    dispersionRadius: 5
+    dispersionRadius: 1
+    relativaScale: 0.5
   - name: rock
     objects:
     - {fileID: 100000, guid: abe8e104f111c844c8b60383888576f4, type: 3}
@@ -627,7 +767,8 @@ MonoBehaviour:
     - {fileID: 100000, guid: acbf893e9bf399043a112d51f1c1aca0, type: 3}
     - {fileID: 100000, guid: acc5d63c3ca7c634eab76b4dadd96db8, type: 3}
     probability: 0.05
-    dispersionRadius: 5
+    dispersionRadius: 1
+    relativaScale: 0.5
   - name: stone
     objects:
     - {fileID: 100000, guid: c20a8aaf15aef4349abcde9430d0b160, type: 3}
@@ -665,14 +806,31 @@ MonoBehaviour:
     - {fileID: 100000, guid: 3044d0a6a1b7b244db7e46fa64288436, type: 3}
     - {fileID: 100000, guid: 65b767591973d6a4aa2a53cccc54f144, type: 3}
     probability: 0.05
-    dispersionRadius: 5
+    dispersionRadius: 1
+    relativaScale: 0.5
   - name: grass
     objects:
     - {fileID: 100000, guid: 30f39293d656f0a4fbe714af632744f4, type: 3}
     - {fileID: 100000, guid: ada9fade606cd9b409cade7b636af033, type: 3}
     probability: 0.55
-    dispersionRadius: 3
+    dispersionRadius: 0.5
+    relativaScale: 0.5
+  - name: grass
+    objects:
+    - {fileID: 100000, guid: 30f39293d656f0a4fbe714af632744f4, type: 3}
+    - {fileID: 100000, guid: ada9fade606cd9b409cade7b636af033, type: 3}
+    probability: 0.55
+    dispersionRadius: 0.5
+    relativaScale: 0.5
+  - name: grass
+    objects:
+    - {fileID: 100000, guid: 30f39293d656f0a4fbe714af632744f4, type: 3}
+    - {fileID: 100000, guid: ada9fade606cd9b409cade7b636af033, type: 3}
+    probability: 0.55
+    dispersionRadius: 0.5
+    relativaScale: 0.5
   boardSize: {x: 10, y: 10}
   floorOffset: {x: 0, y: -2.5, z: 0}
   floorPrefab: {fileID: 100000, guid: d65570657b713234485418e34d96fa89, type: 3}
   multFactor: 10
+  sobrepode: 1

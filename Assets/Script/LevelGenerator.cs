@@ -18,7 +18,10 @@ namespace LevelGenerator
         public string name;
         public GameObject[] objects;
         public float probability = 0.2f;
+
+        [Range(0, 1)]
         public float dispersionRadius = 5.0f;
+        public float relativaScale = 1.0f;
     }
 
     [ExecuteInEditMode]
@@ -47,6 +50,8 @@ namespace LevelGenerator
         public Vector3 floorOffset = new Vector3(0, 0, 0);
         public GameObject floorPrefab;
         public float multFactor = 1;
+
+        public bool sobrepode = false;
 
         private void Start()
         {
@@ -235,8 +240,46 @@ namespace LevelGenerator
                     instantiatedLevel.Add(_m.gameObject);
             }
         }
+
+        [ContextMenu("Search for scenario objects")]
+        public void SearchForStaticObjects()
+        {
+            SearchForFloor();
+            SearchForLevel();
+
+            instantiatedVegetation.Clear();
+
+            List<GameObject> objectsToVegetate = new List<GameObject>(instantiatedFloor.Count + instantiatedLevel.Count);
+
+            instantiatedFloor.ForEach(p => objectsToVegetate.Add(p));
+            instantiatedLevel.ForEach(p => objectsToVegetate.Add(p));
+
+            foreach (GameObject gamo in objectsToVegetate)
+            {
+                MeshRenderer[] childrens = gamo.GetComponentsInChildren<MeshRenderer>();
+
+                foreach (MeshRenderer _m in childrens)
+                {
+                    if (_m.gameObject != gamo)
+                    {
+                        instantiatedVegetation.Add(_m.gameObject);
+                    }
+                }
+            }
+
+            print(instantiatedVegetation.Count);
+        }
+
+        [ContextMenu("Test")]
+        public void Test()
+        {
+            print(UnityEngine.Random.insideUnitSphere);
+        }
+
         public void GenerateVegetation()
         {
+            SearchForStaticObjects();
+
             DeleteVegetation();
 
             SearchForFloor();
@@ -256,24 +299,67 @@ namespace LevelGenerator
                 {
                     if (UnityEngine.Random.Range(0f, 1f) <= _o.probability)
                     {
-                        Vector3 pos = UnityEngine.Random.insideUnitSphere * _o.dispersionRadius;
+                        Vector3 pos = UnityEngine.Random.insideUnitSphere * 5f * _o.dispersionRadius;
                         pos.y = gamo.GetComponent<Collider>().bounds.size.y;
                         pos += gamo.transform.position + new Vector3(2.5f, 0f, 2.5f);
 
                         Quaternion rot = Quaternion.Euler(0, UnityEngine.Random.Range(0f, 360f), 0);
 
-                        g = Instantiate(_o.objects[UnityEngine.Random.Range(0, _o.objects.Length)], pos, rot, gamo.transform);
+                        GameObject gamoToInst = _o.objects[UnityEngine.Random.Range(0, _o.objects.Length)];
 
-                        instantiatedVegetation.Add(g);
+                        if (gamoToInst != null)
+                        {
+                            g = Instantiate(gamoToInst, pos, rot, gamo.transform);
+                            g.transform.localScale *= _o.relativaScale;
 
-                        break;
+                            if (g != null)
+                                if (g.GetComponent<Collider>() == null)
+                                    g.AddComponent<BoxCollider>();
+
+                            instantiatedVegetation.Add(g);
+
+                            if (g.name.Contains("grass"))
+                            {
+                                // See if we're under bounds
+                                float boundX_max = g.GetComponent<Collider>().bounds.center.x + g.GetComponent<Collider>().bounds.extents.x;
+                                float boundX_min = g.GetComponent<Collider>().bounds.center.x - g.GetComponent<Collider>().bounds.extents.x;
+                                float boundZ_max = g.GetComponent<Collider>().bounds.center.z + g.GetComponent<Collider>().bounds.extents.z;
+                                float boundZ_min = g.GetComponent<Collider>().bounds.center.z - g.GetComponent<Collider>().bounds.extents.z;
+
+                                if (boundZ_max > gamo.GetComponent<Collider>().bounds.center.z + gamo.GetComponent<Collider>().bounds.extents.z
+                                || boundZ_max < gamo.GetComponent<Collider>().bounds.center.z - gamo.GetComponent<Collider>().bounds.extents.z)
+                                {
+                                    if (g != null)
+                                        DestroyImmediate(g);
+                                }
+                                if (boundZ_min > gamo.GetComponent<Collider>().bounds.center.z + gamo.GetComponent<Collider>().bounds.extents.z
+                                || boundZ_min < gamo.GetComponent<Collider>().bounds.center.z - gamo.GetComponent<Collider>().bounds.extents.z)
+                                {
+                                    if (g != null)
+                                        DestroyImmediate(g);
+                                }
+                                if (boundX_max > gamo.GetComponent<Collider>().bounds.center.x + gamo.GetComponent<Collider>().bounds.extents.x
+                                  || boundX_max < gamo.GetComponent<Collider>().bounds.center.x - gamo.GetComponent<Collider>().bounds.extents.x)
+                                {
+                                    if (g != null)
+                                        DestroyImmediate(g);
+                                }
+                                if (boundX_min > gamo.GetComponent<Collider>().bounds.center.x + gamo.GetComponent<Collider>().bounds.extents.x
+                                || boundX_min < gamo.GetComponent<Collider>().bounds.center.x - gamo.GetComponent<Collider>().bounds.extents.x)
+                                {
+                                    if (g != null)
+                                        DestroyImmediate(g);
+                                }
+                            }
+
+                            if (!sobrepode)
+                                break;
+                        }
                     }
                 }
-
-                if (g != null)
-                    if (g.GetComponent<Collider>() == null)
-                        g.AddComponent<BoxCollider>();
             }
+
+            gameObject.GetComponent<ColliderSetter>().SetCollider("grass");
         }
 
         private List<GameObject> ToList(GameObject[] _array)

@@ -11,6 +11,7 @@ namespace LevelGenerator
         SerializedProperty dimension;
         SerializedProperty floorPrefab;
         SerializedProperty objectsToSpawn;
+        SerializedProperty sobrepode;
 
         void OnEnable()
         {
@@ -19,6 +20,7 @@ namespace LevelGenerator
             dimension = serializedObject.FindProperty("dimension");
             floorPrefab = serializedObject.FindProperty("floorPrefab");
             objectsToSpawn = serializedObject.FindProperty("objectsToSpawn");
+            sobrepode = serializedObject.FindProperty("sobrepode");
         }
 
 
@@ -66,6 +68,7 @@ namespace LevelGenerator
                 GUILayout.Space(10);
                 EditorGUILayout.LabelField("Static generation", EditorStyles.boldLabel);
 
+                EditorGUILayout.PropertyField(sobrepode);
                 EditorGUILayout.PropertyField(objectsToSpawn, true);
 
                 GUILayout.BeginHorizontal();
