@@ -101901,22 +101901,22 @@ Prefab:
     - target: {fileID: 114765838848124308, guid: 27d584ce01f31ec439cbd452b555c54c,
         type: 2}
       propertyPath: m_GravityMultiplier
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114765838848124308, guid: 27d584ce01f31ec439cbd452b555c54c,
         type: 2}
       propertyPath: jump_y
-      value: 1000
+      value: 1100
       objectReference: {fileID: 0}
     - target: {fileID: 114765838848124308, guid: 27d584ce01f31ec439cbd452b555c54c,
         type: 2}
       propertyPath: jump_plane
-      value: 700
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 114765838848124308, guid: 27d584ce01f31ec439cbd452b555c54c,
         type: 2}
       propertyPath: m_JumpPower
-      value: 15
+      value: 17
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27d584ce01f31ec439cbd452b555c54c, type: 2}

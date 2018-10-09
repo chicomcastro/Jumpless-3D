@@ -193,6 +193,12 @@ namespace PC3D
             {
                 if (!slide && !spinning && CrossPlatformInputManager.GetButton("Front"))
                     m_Rigidbody.velocity = new Vector3(0, m_Rigidbody.velocity.y, 0) + 10 * new Vector3(transform.forward.x, 0, transform.forward.z);
+                if (!slide && !spinning && CrossPlatformInputManager.GetButton("Back"))
+                    m_Rigidbody.velocity = new Vector3(0, m_Rigidbody.velocity.y, 0) + 10 * new Vector3(transform.forward.x, 0, transform.forward.z);
+                if (!slide && !spinning && CrossPlatformInputManager.GetButton("Right"))
+                    m_Rigidbody.velocity = new Vector3(0, m_Rigidbody.velocity.y, 0) + 10 * new Vector3(transform.forward.x, 0, transform.forward.z);
+                if (!slide && !spinning && CrossPlatformInputManager.GetButton("Left"))
+                    m_Rigidbody.velocity = new Vector3(0, m_Rigidbody.velocity.y, 0) + 10 * new Vector3(transform.forward.x, 0, transform.forward.z);
                 HandleAirborneMovement(jump);
             }
 
