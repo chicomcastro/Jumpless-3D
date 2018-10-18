@@ -1946,8 +1946,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1303105267731368}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.5, y: 0.002, z: -30.61}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 89.1, y: 0.01, z: 5.5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4115106498366154}
   - {fileID: 4498895339099216}
@@ -1955,7 +1955,7 @@ Transform:
   - {fileID: 4284585672780988}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!4 &4563237796008758
 Transform:
   m_ObjectHideFlags: 1
@@ -2593,18 +2593,18 @@ MonoBehaviour:
   m_MoveSpeedMultiplier: 1
   m_AnimSpeedMultiplier: 1
   m_GroundCheckDistance: 0.3
-  m_JumpPower: 10
+  m_JumpPower: 15
   jumpQuant: 2
-  m_GravityMultiplier: 1
+  m_GravityMultiplier: 2
   canFly: 0
   dashStep: 0.1
-  dashDistance: 4
+  dashDistance: 8
   dashCooldown: 5
   sildeStep: 0.1
   slideJump: 0
   slideDown: 0
   jump_plane: 500
-  jump_y: 600
+  jump_y: 1100
 --- !u!124 &124570492239737352
 Behaviour:
   m_ObjectHideFlags: 1
